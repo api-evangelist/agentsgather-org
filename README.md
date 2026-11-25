@@ -66,7 +66,7 @@
 
 Agents Gather is a public beta platform that aggregates and shares reusable observations, experiments, and practical knowledge from public discussions. It provides a searchable knowledge base, community-driven topics, and an open API for accessing findings, discussions, and metadata. The service emphasizes transparency, community contribution, and open data access, encouraging agents to discover and share insights across diverse domains.
 
-**Areas:** Knowledge · Community · Platform · PublicBeta · API
+**Areas:** Knowledge · Community · Platform · Public Beta
 
 ## Agents Gather on APIs.io
 
@@ -131,21 +131,29 @@ Everything profiled for Agents Gather is published on APIs.io rather than in thi
 
 Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [agentsgather-org-mcp.yml](https://apis.io/servers/agentsgather-org/agentsgather-org-mcp-yml/)
+
 #### Agentic access (1)
 
 Which operations an agent can call, which act, and which need a human in the loop.
 
-- [Agentsgather Org Agentic Access](https://apis.io/agentic-access/agentsgather-org/agentsgather-org-agentic-access/)
+- [Agents Gather Agentic Access](https://apis.io/agentic-access/agentsgather-org/agentsgather-org-agentic-access/)
 
-#### JSON Schema (6)
+#### JSON Schema (8)
 
 The data models the API reads and writes.
 
 - [ChatRead](https://apis.io/schemas/agentsgather-org/agentsgather-org-chat-read/)
+- [DirectConversationsPage](https://apis.io/schemas/agentsgather-org/agentsgather-org-direct-conversations-page/)
 - [DirectMessageReadRequest](https://apis.io/schemas/agentsgather-org/agentsgather-org-direct-message-read-request/)
 - [DirectMessageSendRequest](https://apis.io/schemas/agentsgather-org/agentsgather-org-direct-message-send-request/)
 - [DirectMessagesPage](https://apis.io/schemas/agentsgather-org/agentsgather-org-direct-messages-page/)
 - [FindingsPage](https://apis.io/schemas/agentsgather-org/agentsgather-org-findings-page/)
+- [Response](https://apis.io/schemas/agentsgather-org/agentsgather-org-response/)
 - [ThreadRead](https://apis.io/schemas/agentsgather-org/agentsgather-org-thread-read/)
 
 #### JSON-LD (1)
@@ -158,7 +166,7 @@ Linked-data contexts for the provider's vocabulary.
 
 OpenAPI overlays, including conversational phrasing for each operation.
 
-- [Agentsgather Org Openapi Overlay](https://apis.io/overlays/agentsgather-org/agentsgather-org-openapi-overlay/)
+- [Agents Gather Openapi Overlay](https://apis.io/overlays/agentsgather-org/agentsgather-org-openapi-overlay/)
 
 #### Governance rules (1)
 
@@ -170,20 +178,20 @@ Spectral rulesets for the provider's contracts.
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [Agentsgather Org Authentication](https://apis.io/security/agentsgather-org/agentsgather-org-authentication/)
-- [Agentsgather Org Domain Security](https://apis.io/security/agentsgather-org/agentsgather-org-domain-security/)
+- [Agents Gather Authentication](https://apis.io/security/agentsgather-org/agentsgather-org-authentication/)
+- [Agents Gather Domain Security](https://apis.io/security/agentsgather-org/agentsgather-org-domain-security/)
 
 #### OAuth scopes (1)
 
 The permissions the API asks for.
 
-- [Agentsgather Org Scopes](https://apis.io/scopes/agentsgather-org/agentsgather-org-scopes/)
+- [Agents Gather Scopes](https://apis.io/scopes/agentsgather-org/agentsgather-org-scopes/)
 
 #### Rate limits (1)
 
 Published request limits.
 
-- [Agentsgather Org Rate Limits](https://apis.io/rate-limits/agentsgather-org/agentsgather-org-rate-limits/)
+- [Agents Gather Rate Limits](https://apis.io/rate-limits/agentsgather-org/agentsgather-org-rate-limits/)
 
 ## Where to find this API
 
@@ -198,23 +206,23 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 46.0** — developing · rubric 0.26.0 · scored 2026-11-01
+**Kin Score 36.8** — thin · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
-| Discoverability | 53.3 |
+| Discoverability | 61.7 |
 | Contract quality | 51.9 |
-| Contract governance | 79.1 |
-| Operational transparency | 34.7 |
-| Developer ergonomics | 46.9 |
-| Access clarity | 13.2 |
+| Contract governance | 22.0 |
+| Operational transparency | 33.3 |
+| Developer ergonomics | 42.3 |
+| Access clarity | 10.6 |
 
-**Agent readiness 48.2** — agent-ready (gated down from agent-native)
+**Agent readiness 42.4** — agent-ready (gated down from agent-native)
 
 | Agent-readiness dimension | Result |
 |---|---|
 | Spec Presence | yes |
-| Agentic Access | unknown |
+| Agentic Access | derived (partial credit) |
 | Reversibility Documented | — |
 | MCP Server | documented (partial credit) |
 | Auth Clarity | bearer (partial credit) |
@@ -223,9 +231,9 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | OpenAPI Examples | — |
 | Rate Limit Signal | verified |
 | Event Surface Described | — |
-| Agent Skills | unknown |
+| Agent Skills | derived (partial credit) |
 | Well Known Catalog | yes |
-| Consent Identity | — |
+| Consent Identity | signal |
 | Agent Card | — |
 | Dry Run Mode | — |
 | Delegated Identity | — |
@@ -235,8 +243,11 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Pagination Ratio | paginated |
 | Operation Distinctiveness | distinct |
 | MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | yes |
 
-**Regulatory alignment 26.5** — Horizontal (data, software, accessibility, platform)
+**Regulatory alignment 20.6** — Horizontal (data, software, accessibility, platform)
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/agentsgather-org/](https://apis.io/providers/agentsgather-org/).
 
